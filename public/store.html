@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/store.css">
+</head>
+<body>
+    <!-- Encabezado con el perfil del usuario -->
+    <header class="bg-dark text-white p-3 mb-3">
+        <div class="container">
+            <div class="user-profile">
+                <img src="path_to_profile_pic.jpg" alt="Foto de perfil" id="profilePic" class="rounded-circle">
+                <span id="userName">Nombre de Usuario</span>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-danger ml-2" id="closeSectionButton">Cerrar Sesión</button>
+                <button class="btn btn-success ml-2" id="addButton">Crear Producto o Categoria</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú de categorías y productos -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Menú de categorías -->
+            <aside class="col-md-3 category-menu">
+                <h5>Categorías</h5>
+                <ul class="list-group" id="categoryList">
+                    <!-- Las categorías se agregarán dinámicamente aquí -->
+                </ul>
+            </aside>
+
+            <!-- Sección de productos -->
+            <section class="col-md-9 product-display">
+                <div class="row" id="productDisplay">
+                    <!-- Ejemplo de cómo podrían mostrarse los productos -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm product-card">
+                            <img src="path_to_product1.jpg" alt="Producto 1" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto 1</h5>
+                                <p class="card-text">$19.99</p>
+                                <p class="card-text text-muted">Disponible: Sí</p>
+                                <p class="card-text text-muted">Vendedor: Nombre del Vendedor</p>
+                                <div class="product-description">
+                                    <p>Descripción del producto 1. Este es un texto de ejemplo que describe el producto.</p>
+                                </div>
+                                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repite bloques similares para cada producto cargado dinámicamente -->
+                </div>
+                <div id="createProductForm" style="display: none;">
+                    <h5>Agregar Nuevo Producto</h5>
+                    <form id="productForm">
+                        <div class="form-group">
+                            <label for="productName">Nombre del Producto</label>
+                            <input type="text" class="form-control" id="productName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productPrice">Precio</label>
+                            <input type="text" class="form-control" id="productPrice" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productImage">Imagen URL</label>
+                            <input type="text" class="form-control" id="productImage" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productAvailable">Disponible</label>
+                            <select class="form-control" id="productAvailable">
+                                <option value="Sí">Sí</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="productDescription">Descripción</label>
+                            <textarea class="form-control" id="productDescription" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar Producto</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Ventana de chat -->
+    <div class="chat-window position-fixed" id="chatWindow" style="bottom: 20px; right: 20px;">
+        <button class="btn btn-success" onclick="toggleChat()" id="chatToggle">Chat</button>
+        <div class="chat-content" id="chatContent" style="display: none;">
+            <!-- Mensajes de chat aquí -->
+            <p>Aquí va el contenido del chat...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/store.js"></script>
+</body>
+</html>

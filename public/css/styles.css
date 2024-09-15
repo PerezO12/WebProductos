@@ -1,0 +1,103 @@
+/* Reinicio básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c2c2c; /* Fondo gris oscuro */
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-card {
+    background-color: #3a3a3a; /* Color de fondo más claro que el fondo general */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #f1f1f1;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.input-container {
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: left;
+}
+
+.input-container label {
+    color: #f1f1f1;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px 10px;
+    background-color: #4a4a4a; /* Fondo más oscuro para los inputs */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.input-container input:focus {
+    background-color: #5c5c5c; /* Cambia el color al enfocarse */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8; /* Azul elegante para el botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1565c0; /* Un tono más oscuro de azul en hover */
+    transform: translateY(-2px);
+}
+
+.signup-text {
+    margin-top: 20px;
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #1a73e8; /* Mismo azul que el botón */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}

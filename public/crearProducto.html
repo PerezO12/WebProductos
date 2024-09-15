@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Producto o Categoría</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/crearProducto.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Crear Producto o Categoría</h2>
+        <div class="form-group">
+            <label for="entityType">Selecciona qué deseas crear:</label>
+            <select id="entityType" class="form-control" onchange="toggleForm()">
+                <option value="producto">Producto</option>
+                <option value="categoria">Categoría</option>
+            </select>
+        </div>
+
+        <!-- Formulario para producto -->
+        <div id="productForm" class="form-container">
+            <h3>Agregar Nuevo Producto</h3>
+            <form id="productFormElement">
+                <div class="form-group">
+                    <label for="productName">Nombre del Producto</label>
+                    <input type="text" class="form-control" id="productName" required>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Precio</label>
+                    <input type="text" class="form-control" id="productPrice" required>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Descripción</label>
+                    <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Categoría</label>
+                    <select class="form-control" id="productCategory" required>
+<!--                         <option value="electronics">Electrónica</option>
+                        <option value="furniture">Muebles</option>
+                        <option value="clothing">Ropa</option> -->
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnProducto">Agregar Producto</button>
+            </form>
+        </div>
+
+        <!-- Formulario para categoría -->
+        <div id="categoryForm" class="form-container" style="display: none;">
+            <h3>Agregar Nueva Categoría</h3>
+            <form id="categoryFormElement">
+                <div class="form-group">
+                    <label for="categoryName">Nombre de la Categoría</label>
+                    <input type="text" class="form-control" id="categoryName" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnCategoria">Agregar Categoría</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/crearProducto.js"></script>
+</body>
+</html>
