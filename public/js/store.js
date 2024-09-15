@@ -109,7 +109,7 @@ fetch('api/categorias')
   
    
 addButton.addEventListener('click', () => {
-    window.location.href = '/crearProducto.html';
+    window.location.href = '/store/crearProducto';
 })
 
 cerrarSeccion.addEventListener('click', () => {
