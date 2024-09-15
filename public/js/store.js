@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const productCard = `
                     <div class="col-md-4 mb-4">
                         <div class="card shadow-sm product-card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxh8BD0DA2pXdWttkJ5wnK-5PIfPAUP8B0g&s" alt="${producto.nombre}" class="card-img-top">
+                            <img src="${producto.img}" alt="${producto.nombre}" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">${producto.nombre}</h5>
                                 <p class="card-text">$${producto.precio}</p>
