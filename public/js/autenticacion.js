@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         password: password
     };
 
-    fetch('http://localhost:8081/api/auth/login', {
+    fetch('/api/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         if (data.usuario && data.token) {
             localStorage.setItem('x-token', data.token); // Guardar token en el almacenamiento local
             localStorage.setItem('username', data.usuario.nombre); // Guardar nombre de usuario del servidor
-            window.location.href = '/store.html';
+            window.location.href = '/store';
         } else {
             alert('Autenticación fallida: ' + (data.msg || 'Credenciales incorrectas'));
         }
